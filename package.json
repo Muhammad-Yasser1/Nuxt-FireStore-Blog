@@ -1,0 +1,23 @@
+{
+    "name": "nuxt-mo-blog",
+    "version": "1.0.0",
+    "description": "My super Nuxt.js project",
+    "author": "Muhammad-Yasser1",
+    "private": true,
+    "scripts": {
+        "dev": "nuxt",
+        "build": "nuxt build",
+        "start": "nuxt start",
+        "generate": "nuxt generate"
+    },
+    "dependencies": {
+        "cross-env": "^5.2.0",
+        "nuxt": "^2.3.4",
+        "@nuxtjs/axios": "^5.3.6"
+    },
+    "devDependencies": {
+        "node-sass": "^4.11.0",
+        "nodemon": "^1.18.9",
+        "sass-loader": "^7.1.0"
+    }
+}
