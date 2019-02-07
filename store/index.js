@@ -22,16 +22,16 @@ export const mutations = {
             })
             .then(res => {
                 state.token = res.idToken;
-                localStorage.setItem('token', res.idToken);
+                window.localStorage.setItem('token', res.idToken);
                 if (res.email == 'admin@admin.com') {
                     state.isAdmin = true;
-                    localStorage.setItem('isAdmin', true);
+                    window.localStorage.setItem('isAdmin', true);
                     return this.$router.push({
                         path: "/admin"
                     });
                 } else {
                     state.isAdmin = false;
-                    localStorage.removeItem('isAdmin');
+                    window.localStorage.removeItem('isAdmin');
                     this.$router.push({
                         path: "/posts"
                     });
@@ -41,8 +41,8 @@ export const mutations = {
     logout(state) {
         state.token = null;
         state.isAdmin = false;
-        localStorage.removeItem('token');
-        localStorage.removeItem('isAdmin');
+        window.localStorage.removeItem('token');
+        window.localStorage.removeItem('isAdmin');
         this.$router.push('/')
     },
     createArticle(state, payload) {

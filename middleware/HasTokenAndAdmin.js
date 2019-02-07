@@ -1,8 +1,8 @@
 export default function (context) {
     if (process.client) {
-        if (localStorage.getItem('token')) {
-            context.store.state.token = localStorage.getItem('token');
-            context.store.state.isAdmin = Boolean(localStorage.getItem('isAdmin'));
+        if (window.localStorage.getItem('token')) {
+            context.store.state.token = window.localStorage.getItem('token');
+            context.store.state.isAdmin = Boolean(window.localStorage.getItem('isAdmin'));
             if (context.store.state.isAdmin) {
                 context.redirect('/admin')
             } else {

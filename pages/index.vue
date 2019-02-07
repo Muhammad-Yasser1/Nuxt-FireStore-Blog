@@ -58,14 +58,14 @@ export default {
     created() {
         if (process.client) {
             if (
-                localStorage.getItem("token") &&
-                !localStorage.getItem("isAdmin")
+                window.localStorage.getItem("token") &&
+                !window.localStorage.getItem("isAdmin")
             ) {
                 this.$router.push("/posts");
             }
             if (
-                localStorage.getItem("token") &&
-                localStorage.getItem("isAdmin")
+                window.localStorage.getItem("token") &&
+                window.localStorage.getItem("isAdmin")
             ) {
                 this.$router.push("/admin");
             }
