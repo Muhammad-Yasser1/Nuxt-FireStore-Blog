@@ -2,6 +2,19 @@
 
 > My super Nuxt.js project
 
+Login as an Admin:
+username: admin@admin.com
+password: 123456
+
+Login as an user:
+username: user@user.com
+password: 123456
+
+
+
+
+
+
 ## Build Setup
 
 ``` bash
